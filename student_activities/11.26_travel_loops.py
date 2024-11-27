@@ -24,8 +24,7 @@ def vacay_tool():
 
     # Loop through the cities_daily_cost list and add 10 to each item
     print(cities_daily_cost)
-    new_cities_daily_cost = [x+10 for x in cities_daily_cost]
-    cities_daily_cost = new_cities_daily_cost
+    cities_daily_cost = [x+10 for x in cities_daily_cost]
     print(cities_daily_cost)
     # Use a for loop to loop through both of the lists at the same time, since
     # they're the same length, and print out the city and daily cost on the same
