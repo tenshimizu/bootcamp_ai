@@ -89,8 +89,6 @@ for birds in birds_dictionaries:
 for bird in birds_dictionaries:
     if bird['size (cm)']/bird['weight (g)'] == max(bird['size (cm)']/bird['weight (g)'] for bird in birds_dictionaries):
         print(f"{bird['name']} has the highest size to weight ratio.")
-    #which bird in the bird_dictionary has the lowest size to weight ratio (heaviest for its size)?
-for bird in birds_dictionaries:
     if bird['size (cm)']/bird['weight (g)'] == min(bird['size (cm)']/bird['weight (g)'] for bird in birds_dictionaries):
         print(f"{bird['name']} has the lowest size to weight ratio.")
 
