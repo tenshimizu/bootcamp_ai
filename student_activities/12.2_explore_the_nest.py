@@ -77,7 +77,7 @@ for bird in birds_list:
 
 # Calculate the total weight (kg) of all the birds in the birds list
 total_weight_kg = sum(birds_list[2])/1000
-print(round(total_weight_kg, 2))
+print(round(total_weight_kg,3))
 
 # Loop through the birds_dictionaries list
      # Print the names of the birds and their lifespans from the birds_dictionary
@@ -85,7 +85,12 @@ print(round(total_weight_kg, 2))
 for birds in birds_dictionaries:
     print(f"{birds['name']} has a lifespan of {birds['lifespan']} years.It's size to weight ratio is {birds['size (cm)']/birds['weight (g)']}")  
 
-# Highest size to weight ratio: 
-print(max(bird['size (cm)']/bird['weight (g)'] for bird in birds_dictionaries))
-# Lowest size to weight ratio: 
-print(min(bird['size (cm)']/bird['weight (g)'] for bird in birds_dictionaries))
+# Which bird in the bird_dictionary has the highest size to weight ratio (lightest weight for its size)?: 
+for bird in birds_dictionaries:
+    if bird['size (cm)']/bird['weight (g)'] == max(bird['size (cm)']/bird['weight (g)'] for bird in birds_dictionaries):
+        print(f"{bird['name']} has the highest size to weight ratio.")
+    #which bird in the bird_dictionary has the lowest size to weight ratio (heaviest for its size)?
+for bird in birds_dictionaries:
+    if bird['size (cm)']/bird['weight (g)'] == min(bird['size (cm)']/bird['weight (g)'] for bird in birds_dictionaries):
+        print(f"{bird['name']} has the lowest size to weight ratio.")
+
